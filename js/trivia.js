@@ -72,7 +72,7 @@ const nextQuestion = async () => {
 
 const displayGoToScore = () => {
   displayLoading();
-  lblNextAnswer.textContent = "___________________________________";
+  lblNextAnswer.textContent = "Ya no hay más preguntas 😔";
 };
 
 const displayLoading = () => {
@@ -94,6 +94,12 @@ const checkAnswer = async (selectedOption) => {
   if (answerCorrect) {
     score += 100;
   }
+
+  // Save result answerIndex: result
+  questions[currentQuestionIndex]["is_correct"] = answerCorrect;
+  questions[currentQuestionIndex]["your_answer"] = selectedAnswer;
+  db.saveTrivia([...questions]);
+
   displayAnswerResult();
   await nextQuestion();
 };

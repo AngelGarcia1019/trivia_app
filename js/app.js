@@ -73,6 +73,13 @@ myForm.addEventListener("submit", async (e) => {
   console.log(questions);
   db.saveTrivia(questions);
 
+  //
+  if (questions.length == 0) {
+    alert("No hay preguntas con estas opcione");
+    // window.location = "index";
+    return;
+  }
+
   // Save data options
   const firstQuestion = questions[0];
   db.saveCategory(firstQuestion.category);

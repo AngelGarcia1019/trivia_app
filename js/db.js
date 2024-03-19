@@ -23,7 +23,7 @@ class DB {
   saveDifficultyAnswer = (difficultyAnswer = "") =>
     localStorage.setItem(this.keyDifficultyAnswer, difficultyAnswer);
 
-  saveScore = (score = 0) => localStorage.setItem(this.keyScore, score);
+  saveScore = (score) => localStorage.setItem(this.keyScore, score);
 
   readTypeAnswer = () => localStorage.getItem(this.keyTypeAnswers);
 

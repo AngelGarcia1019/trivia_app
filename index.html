@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./js/api.js"></script>
+    <script type="module" src="./js/db.js"></script>
+</head>
+
+<body class="flex flex-col flex-1 justify-center bg-indigo-600 min-h-screen w-auto px-10 pb-10">
+
+    <h1 class="flex items-center justify-center text-8xl font-bold text-white mt-10 min-w-full">
+        Trivia App
+    </h1>
+
+    <form id="form" class="flex flex-col items-center mt-16 text-white w-1/2 min-w-full mx-1">
+
+        <label for="categories" class="text-xl font-bold"> Categoría </label>
+        <select name="category" id="categories"
+            class="bg-gray-50 border border-gray-300 text-gray-900 select-text p-2.5 rounded-sm mt-2 min-w-full"
+            id="selectCategory" title="Selecciona la categoría">
+        </select>
+
+        <br>
+
+        <label for="typeAnswers" class="text-xl font-bold"> Tipo de pregunta </label>
+        <select name="typeAnswer" id="typeAnswers"
+            class="bg-gray-50 border border-gray-300 text-gray-900 select-text p-2.5 rounded-sm mt-2 min-w-full"
+            id="selectCategory" title="Selecciona tipo de pregunta">
+        </select>
+
+
+        <br>
+
+        <label for="difficultiesAnswers" class="text-xl font-bold"> Tipo de pregunta </label>
+        <select name="difficultyAnswer" id="difficultiesAnswers"
+            class="bg-gray-50 border border-gray-300 text-gray-900 select-text p-2.5 rounded-sm mt-2 min-w-full"
+            id="selectCategory" title="Selecciona tipo de pregunta">
+        </select>
+
+
+        <button id="btn-generate" type="submit"
+            class="bg-green-600 rounded-md hover:text-black mt-10 h-10 text-xl disabled:bg-gray-600 min-w-full">Generar</button>
+    </form>
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

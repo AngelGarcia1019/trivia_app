@@ -76,7 +76,7 @@ myForm.addEventListener("submit", async (e) => {
   //
   if (questions.length == 0) {
     alert("No hay preguntas con estas opcione");
-    // window.location = "index";
+    window.location = "index.html";
     return;
   }
 
